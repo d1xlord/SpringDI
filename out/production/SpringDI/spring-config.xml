@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+    <bean id="shape1" class="com.tigerit.Objects.Rectangle">
+        <property name="length" value="10"/>
+        <property name="width" value="20"/>
+    </bean>
+    <bean id="shape2" class="com.tigerit.Objects.Circle">
+        <constructor-arg value="10"/>
+    </bean>
+    <bean id="shape3" class="com.tigerit.Objects.ShapeMaker"
+            factory-method="randomShape1">
+    </bean>
+    <bean id="shape4" class="com.tigerit.Objects.ShapeMaker"
+          factory-method="randomShape2">
+        <constructor-arg value="100"/>
+    </bean>
+</beans>
